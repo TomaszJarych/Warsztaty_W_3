@@ -10,7 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <context-param>
-  <param-name>numberOfUsers</param-name>
-  <param-value>5</param-value>
+    <param-name>numberOfUsers</param-name>
+    <param-value>5</param-value>
   </context-param>
 </web-app>

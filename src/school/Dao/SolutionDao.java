@@ -76,7 +76,7 @@ public class SolutionDao {
 		Solution solution = new Solution(description, exerciseId, userID);
 		solution.setId(resultSet.getLong(ID_COLUMN_NAME));
 		solution.setCreated(resultSet.getTimestamp("created").toLocalDateTime());
-		solution.setUpdated(resultSet.getTimestamp("updated").toLocalDateTime());
+		//solution.setUpdated(resultSet.getTimestamp("updated").toLocalDateTime());
 		return solution;
 	}
 
@@ -94,11 +94,11 @@ public class SolutionDao {
 			return new ArrayList<>();
 		}
 	}
-	public static List<Solution> allSolutionsLimit(long limit) throws SQLException {
+	public static List<Solution> allSolutionsLimit(int limit) throws SQLException {
 		try (Connection conn = DbUtil.getConn()) {
-			ArrayList<Solution> solutions = new ArrayList<Solution>();
+			List<Solution> solutions = new ArrayList<Solution>();
 			PreparedStatement preparedStatement = conn.prepareStatement(LOAD_ALL_SOLUTIONS_LIMIT);
-			preparedStatement.setLong(1, limit);
+			preparedStatement.setInt(1, limit);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 				solutions.add(createSolution(resultSet));

@@ -12,4 +12,7 @@ public class UserService {
 	public List<User> loadAllUsersLimit(int limit) throws SQLException {
 		return dao.loadAllUsersLimit(limit);
 	}
+	public List<User> loadAllUsers() throws SQLException {
+		return dao.loadAllUsers();
+	}
 }

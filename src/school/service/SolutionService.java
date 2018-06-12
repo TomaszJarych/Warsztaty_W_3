@@ -10,10 +10,17 @@ public class SolutionService {
 	SolutionDao dao = new SolutionDao();
 	
 	
-	public List<Solution> allSolutionsLimit(long limit) throws SQLException{
+	public List<Solution> allSolutionsLimit(int limit) throws SQLException{
 		return dao.allSolutionsLimit(limit);
 		
 	}
 	
+	public void addSolution (Solution solution) throws SQLException{
+		dao.saveToDB(solution);
+	}
+	
+	public Solution getSolution (long id) throws SQLException {
+		return dao.loadSolutionById(id);
+	}
 
 }
