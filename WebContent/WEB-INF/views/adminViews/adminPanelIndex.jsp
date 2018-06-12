@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Użytkownicy</title>
 </head>
 <body>
 	<div><%@ include file="../fragments/header.jspf"%></div>
 	
 	<h1><a href="./AdminGroup">Lista Grup</a></h1>
 	<h1><a href="">Lista Zadań</a></h1>
-	<h1><a href="">Lista użytkowników</a></h1>
+	<h1><a href="./adminAllUsers">Lista użytkowników</a></h1>
 
 
 	<div><%@ include file="../fragments/footer.jspf"%></div>

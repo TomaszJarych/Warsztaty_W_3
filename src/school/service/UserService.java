@@ -21,5 +21,10 @@ public class UserService {
 	public List<User> loadAllByGrupId(long userGroupId) throws SQLException {
 		return dao.loadAllByGrupId(userGroupId);
 	}
-	
+	public void save(User user) throws SQLException {
+		dao.save(user);
+	}
+	public void deleteUser (User user) throws SQLException{
+		dao.delete(user);
+	}
 }
