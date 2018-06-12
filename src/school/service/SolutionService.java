@@ -5,6 +5,7 @@ import java.util.List;
 
 import school.Dao.SolutionDao;
 import school.domain.Solution;
+import school.domain.User;
 
 public class SolutionService {
 	SolutionDao dao = new SolutionDao();
@@ -21,6 +22,9 @@ public class SolutionService {
 	
 	public Solution getSolution (long id) throws SQLException {
 		return dao.loadSolutionById(id);
+	}
+	public  List<Solution> loadAllByUserId(User user) throws SQLException {
+		return dao.loadAllByUserId(user);
 	}
 
 }

@@ -15,5 +15,13 @@ public class GroupService {
 	public Group loadGroupByID(long id) throws SQLException {
 			return dao.loadGroupByID(id);
 	}
+	
+	public void addGroup(Group group) throws SQLException{
+		dao.saveToDB(group);
+	}
+	
+	public void deleteGroup (Group group) throws SQLException {
+		dao.deleteGroup(group);
+	}
 
 }
