@@ -122,7 +122,7 @@ public class UserDao {
 	}
 	public static List<User> loadAllUsersLimit(int limit) throws SQLException {
 		try (Connection conn = DbUtil.getConn()) {
-			ArrayList<User> users = new ArrayList<User>();
+			List<User> users = new ArrayList<User>();
 			String sql = "SELECT * FROM warsztaty2.users order by id desc Limit ?";
 			PreparedStatement preparedStatement = conn.prepareStatement(sql);
 			preparedStatement.setInt(1, limit);
@@ -139,7 +139,7 @@ public class UserDao {
 
 	public static List<User> loadAllByGrupId(long userGroupId) throws SQLException {
 		try (Connection conn = DbUtil.getConn()) {
-			ArrayList<User> users = new ArrayList<User>();
+			List<User> users = new ArrayList<User>();
 			PreparedStatement preparedStatement = conn.prepareStatement(LOAD_ALL_BY_GRUP_ID);
 			preparedStatement.setLong(1, userGroupId);
 			ResultSet resultSet = preparedStatement.executeQuery();

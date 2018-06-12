@@ -15,4 +15,11 @@ public class UserService {
 	public List<User> loadAllUsers() throws SQLException {
 		return dao.loadAllUsers();
 	}
+	public User loadUserById(long id) throws SQLException {
+		return dao.loadUserById(id);
+	}
+	public List<User> loadAllByGrupId(long userGroupId) throws SQLException {
+		return dao.loadAllByGrupId(userGroupId);
+	}
+	
 }

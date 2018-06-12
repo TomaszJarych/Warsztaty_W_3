@@ -9,8 +9,11 @@ import school.domain.Group;
 public class GroupService {
 	GroupDao dao = new GroupDao();
 
-	public List<Group> loadAllGroupsLimit(int limit) throws SQLException {
-		return dao.loadAllGroupsLimit(limit);
+	public List<Group> loadAllGroups() throws SQLException {
+		return dao.loadAllGroups();
+	}
+	public Group loadGroupByID(long id) throws SQLException {
+			return dao.loadGroupByID(id);
 	}
 
 }

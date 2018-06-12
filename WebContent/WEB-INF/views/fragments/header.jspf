@@ -1,4 +1,7 @@
 
 <div>
-<h1><a href="./">Strona glowna</a></h1>
+<h1>
+<a href="./">Strona glowna</a>
+<a href="./groups">Grupy</a>
+</h1>
 </div>

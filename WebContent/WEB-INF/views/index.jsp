@@ -11,8 +11,8 @@
 <div>
 <%@ include file="./fragments/header.jspf" %>
 </div>
-
-	<table align="left" border="1" bgcolor="grey">
+<div>
+	<table align="left" border="1" bgcolor="silver">
 		<thead>
 			<tr>
 				<td>ID</td>
@@ -40,7 +40,8 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	
-<%@ include file="./fragments/footer.jspf"%>
+</div>
+
+<div><%@ include file="./fragments/footer.jspf"%></div>	
 </body>
 </html>

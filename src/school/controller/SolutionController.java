@@ -29,7 +29,6 @@ public class SolutionController extends HttpServlet {
 //			e.printStackTrace();
 //		}
 		int limit = Integer.parseInt(getServletContext().getInitParameter("numberOfUsers"));
-		System.out.println(limit);
 		try {
 			request.setAttribute("solutions", service.allSolutionsLimit(limit));
 			getServletContext().getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);

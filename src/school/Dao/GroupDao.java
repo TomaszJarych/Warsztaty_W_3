@@ -66,7 +66,7 @@ public class GroupDao {
 
 	public static List<Group> loadAllGroups() throws SQLException {
 		try (Connection conn = DbUtil.getConn()) {
-			ArrayList<Group> allGroups = new ArrayList<>();
+			List<Group> allGroups = new ArrayList<>();
 			PreparedStatement preparedStatement = conn.prepareStatement(LOAD_ALL_GROUPS);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
