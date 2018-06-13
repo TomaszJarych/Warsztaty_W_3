@@ -10,7 +10,7 @@
 	<div><%@ include file="../fragments/header.jspf"%></div>
 	
 	<h1><a href="./AdminGroup">Lista Grup</a></h1>
-	<h1><a href="">Lista Zadań</a></h1>
+	<h1><a href="./allExercises">Lista Zadań</a></h1>
 	<h1><a href="./adminAllUsers">Lista użytkowników</a></h1>
 
 
